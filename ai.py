@@ -1,0 +1,3 @@
+
+getNextBestMove():
+	print('hi')
