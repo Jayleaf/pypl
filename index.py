@@ -3,6 +3,7 @@ from wordle import initiatePuzzle
 import os
 from ascii import initA
 from blackjack import startGame
+from tictactoe import tinit
 
 
 def init():
@@ -11,10 +12,10 @@ def init():
     clear()
 
     print("Welcome to my Python Playground! I'm just learning things here, so feel free to input a keyword to try out one of my projects.")
-    key = input("Valid Inputs: \"close\", \"wordle\", \"ascii\", \"blackjack\": ")
+    key = input("Valid Inputs: \"close\", \"wordle\", \"ascii\", \"blackjack\", \"tictactoe\": ")
 
 
-    PlaygroundKeys = ['wordle', 'ascii', 'blackjack']
+    PlaygroundKeys = ['wordle', 'ascii', 'blackjack', 'ttt', 'tictactoe']
 
 
     if key == "close":
@@ -36,6 +37,11 @@ def init():
         clear = lambda: os.system('cls')
         clear()
         startGame()
+
+    if key == 'ttt':
+        clear = lambda: os.system('cls')
+        clear()
+        tinit()
 
     if key not in PlaygroundKeys:
         print('You didn\'t input a valid playground key.')
